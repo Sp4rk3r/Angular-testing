@@ -1,4 +1,5 @@
 {
+  "HELLO": "Hello",
   "HOME": {
     "HELLO": "Angular test version translate: {{value}}"
   }

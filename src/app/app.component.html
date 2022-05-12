@@ -1,7 +1,10 @@
 <hello name="{{ name }}"></hello>
 <p *ngIf="data$ | async">Start editing to see some magic happen :)</p>
-<!-- <p>{{ 'HOME.HELLO' | translate: param }}</p> -->
+<p>test: {{ 'HOME.HELLO' | translate: param }}</p>
 
 <div *ngIf="data$ | async as data">
   {{ data.title }}
 </div>
+
+<button (click)="changeLanguage('nl')">Nederlands</button>
+<button (click)="changeLanguage('en')">Engels</button>
