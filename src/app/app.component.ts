@@ -2,6 +2,7 @@ import { Component, VERSION } from '@angular/core';
 
 import { TodoService } from './todo.service';
 import { map, tap } from 'rxjs/operators';
+import {TranslateService} from '@ngx-translate/core';
 
 interface ToDo {
   userId: number;
@@ -17,6 +18,7 @@ interface ToDo {
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
+  param = {value: VERSION.major}
 
   data$ = this.todoService.todo$.pipe(
     map((x: ToDo) => ({
@@ -28,7 +30,12 @@ export class AppComponent {
     })
   );
 
-  constructor(private todoService: TodoService) {}
+  constructor(private todoService: TodoService, translate: TranslateService) {
+         translate.setDefaultLang('en');
+
+         // the lang to use, if the lang isn't available, it will use the current loader to get them
+        translate.use('en');
+  }
 
   // Result without ...x
   // ===================
