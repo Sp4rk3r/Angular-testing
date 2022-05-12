@@ -9,4 +9,11 @@ export class HelloComponent {
   @Input() name: string;
 
   constructor() {}
+
+  //<div translate [translateParams]="{value: 'world'}">HELLO</div>
+  //<div [translate]="'HELLO'" [translateParams]="{value: 'world'}"></div>
+
+  // Inside Json 
+  // "HELLO": "Welcome to my Angular application!<br><strong>This is an amazing app which uses the latest technologies!</strong>"
+  // -> render them: <div [innerHTML]="'HELLO' | translate"></div>
 }
