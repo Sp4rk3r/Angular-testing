@@ -30,11 +30,8 @@ export class AppComponent {
     })
   );
 
-  constructor(private todoService: TodoService, translate: TranslateService) {
-         translate.setDefaultLang('en');
-
-         // the lang to use, if the lang isn't available, it will use the current loader to get them
-        translate.use('en');
+  constructor(private todoService: TodoService) {
+        
   }
 
   // Result without ...x
