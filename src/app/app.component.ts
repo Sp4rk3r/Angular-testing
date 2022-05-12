@@ -19,6 +19,7 @@ interface ToDo {
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
   param = { value: VERSION.major };
+  language: string;
 
   // Test language in typescript
   data$ = this.todoService.todo$.pipe(
@@ -39,11 +40,13 @@ export class AppComponent {
 
     // the lang to use, if the lang isn't available, it will use the current loader to get them
     translate.use('en');
+    this.language = translate.currentLang
   }
 
   changeLanguage(language: string) {
     this.translate.setDefaultLang(language);
     this.translate.use(language);
+    this.language = this.translate.currentLang
   }
 
   // Result without ...x
