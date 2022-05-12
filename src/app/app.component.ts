@@ -18,8 +18,9 @@ interface ToDo {
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
-  param = {value: VERSION.major}
+  param = { value: VERSION.major };
 
+  // Test language in typescript
   data$ = this.todoService.todo$.pipe(
     map((x: ToDo) => ({
       ...x,
@@ -30,16 +31,19 @@ export class AppComponent {
     })
   );
 
-  constructor(private todoService: TodoService, private translate: TranslateService) {
+  constructor(
+    private todoService: TodoService,
+    private translate: TranslateService
+  ) {
     translate.setDefaultLang('en');
 
     // the lang to use, if the lang isn't available, it will use the current loader to get them
-   translate.use('en');
+    translate.use('en');
   }
 
   changeLanguage(language: string) {
-    this.translate.setDefaultLang(language)
-    this.translate.use(language)
+    this.translate.setDefaultLang(language);
+    this.translate.use(language);
   }
 
   // Result without ...x
