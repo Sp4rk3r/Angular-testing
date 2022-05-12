@@ -1,0 +1,6 @@
+<hello name="{{ name }}"></hello>
+<p *ngIf="data$ | async">Start editing to see some magic happen :)</p>
+
+<div *ngIf="data$ | async as data">
+{{ data.title }}
+</div>
