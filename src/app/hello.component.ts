@@ -2,8 +2,8 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'hello',
-  template: `<h1 [translate]="'HELLO'"> </h1><span><h1>{{name}}!</h1></span>
-    <h1 translate>HELLO <span>{{name}}!</span></h1>
+  template: `<h1 [translate]="'HELLO'" [translateParams]="{value: 'world'}"> </h1><span><h1>{{name}}!</h1></span>
+    <h1 translate >HELLO <span>{{name}}!</span></h1>
   
   `,
   styles: [`h1 { font-family: Lato; }`],
