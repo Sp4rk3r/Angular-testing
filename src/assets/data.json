@@ -1,0 +1,22 @@
+[
+  {
+    "prijs": 750,
+    "id": 0,
+    "comment": "Huur"
+  },
+  {
+    "prijs": 90,
+    "id": 1,
+    "comment": "Snapmaker"
+  },
+  {
+    "prijs": 60,
+    "id": 2,
+    "comment": "Ipad"
+  },
+  {
+    "prijs": 43,
+    "id": 3,
+    "comment": "Samsung"
+  }
+]

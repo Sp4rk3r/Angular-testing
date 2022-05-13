@@ -1,11 +1,20 @@
 <hello name="{{ name }}"></hello>
-<p>{{language}}</p>
+<p>{{ language }}</p>
 <p *ngIf="data$ | async">Start editing to see some magic happen :)</p>
 <p>test: {{ 'HOME.HELLO' | translate: param }}</p>
 
 <div *ngIf="data$ | async as data">
   {{ data.title }}
 </div>
+
+<!-- <div *ngIf="price$ | async as test">
+  <ng-container *ngFor="let price of test">
+    <p>
+      {{ price.id }} - {{ price.prijs }} - {{ price.comment }} -
+      {{ price.totaal }}
+    </p>
+  </ng-container>
+</div> -->
 
 <button (click)="changeLanguage('nl')">Nederlands</button>
 <button (click)="changeLanguage('en')">Engels</button>
